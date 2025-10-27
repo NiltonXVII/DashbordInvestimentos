@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts_montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts_montserrat/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts_montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts_montserrat/Montserrat-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts_montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts_montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts_montserrat/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+:root {
+    --cor_primaria_amarelo: #FFEC00;
+    --cor_secundaria_azul: #0033A0;
+    --cor_texto_claro: #f8f9fa;
+    --cor_fundo_claro: #f8f9fa;
+    --cor_azul_hover: #00226a;
+    --cor_sucesso: #198754;
+    --cor_perigo: #dc3545;
+    --cor_aviso: #ffc107;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor_fundo_claro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.conteudo_principal {
+    flex-grow: 1;
+}
+
+.fundo_amarelo {
+    background-color: var(--cor_primaria_amarelo);
+}
+
+.fundo_azul {
+    background-color: var(--cor_secundaria_azul);
+}
+
+.texto_azul {
+    color: var(--cor_secundaria_azul) !important;
+    font-weight: 500;
+}
+
+.texto_amarelo {
+    color: var(--cor_primaria_amarelo) !important;
+}
+
+.btn_amarelo {
+    background-color: var(--cor_primaria_amarelo);
+    color: var(--cor_secundaria_azul);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn_amarelo:hover {
+    background-color: #e6d500;
+    color: var(--cor_secundaria_azul);
+}
+
+.link_animado {
+    transition: opacity 0.3s ease;
+}
+
+.link_animado:hover {
+    opacity: 0.8;
+}
+
+.dropdown-menu.fundo_azul {
+    background-color: var(--cor_secundaria_azul);
+}
+
+.dropdown-item.texto_amarelo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 236, 0, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 236, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.rodape_principal {
+    background-color: #0033A0;
+    color: var(--cor_texto_claro);
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-top: auto;
+}
+
+.rodape_principal h5 {
+    color: var(--cor_secundaria_azul);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.lista_rodape {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista_rodape li a {
+    color: var(--cor_texto_claro);
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.lista_rodape li a:hover {
+    text-decoration: underline;
+}
+
+.icones_rodape a {
+    font-size: 1.8rem;
+    color: var(--cor_secundaria_azul);
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.icones_rodape a:hover {
+    color: var(--cor_azul_hover);
+}
+
+.assinatura_rodape {
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+.cartao_dashboard {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.cabecalho_cartao {
+    background: linear-gradient(135deg, var(--cor_secundaria_azul), var(--cor_azul_hover));
+    color: var(--cor_primaria_amarelo);
+}
+
+.titulo_formulario {
+    color: var(--cor_secundaria_azul);
+    font-weight: bold;
+    border-bottom: 2px solid var(--cor_primaria_amarelo);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--cor_primaria_amarelo);
+    box-shadow: 0 0 0 0.25rem rgba(255, 236, 0, 0.5);
+}
+
+.btn_principal {
+    background-color: var(--cor_secundaria_azul);
+    border-color: var(--cor_secundaria_azul);
+    font-weight: bold;
+}
+
+.btn_principal:hover {
+    background-color: var(--cor_azul_hover);
+    border-color: var(--cor_azul_hover);
+}
+
+.tabela_investimentos thead {
+    background-color: var(--cor_secundaria_azul);
+}
+
+.tabela_investimentos thead th {
+    color: var(--cor_primaria_amarelo);
+}
+
+.valor_positivo {
+    color: var(--cor_sucesso);
+    font-weight: bold;
+}
+
+.icone_acao {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icone_acao:hover {
+    transform: scale(1.2);
+}
+
+.btn_editar:hover {
+    color: var(--cor_aviso);
+}
+
+.btn_excluir:hover {
+    color: var(--cor_perigo);
+}
+
+#mensagem_feedback {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+}
+
+#mensagem_feedback.d-none {
+    display: none;
+}
+
+.table-responsive {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.valor_positivo {
+    color: var(--cor_sucesso);
+    font-weight: bold;
+}
+
+.btn_editar:hover {
+    color: var(--cor_aviso);
+}
+
+.btn_excluir:hover {
+    color: var(--cor_perigo);
+}
+
+
+.cabecalho_modal {
+    background-color: #003B70;
+    color: #FCFC30;
+    border-bottom: 2px solid #FCFC30;
+}
+
+.conteudo_modal_cadastro {
+    border: 1px solid #003B70;
+}
+
+.cabecalho_modal .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.corpo_modal .input-group-text {
+    background-color: #003B70;
+    color: #FCFC30;
+    border-color: #003B70;
+}
+
+.rodape_modal .botao_principal_modal {
+    background-color: #003B70;
+    border-color: #003B70;
+    color: #FCFC30;
+}
+
+.rodape_modal .botao_principal_modal:hover {
+    background-color: #002f5a;
+    border-color: #002f5a;
+}
